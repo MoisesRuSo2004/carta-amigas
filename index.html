@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para alguien especial…</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@500;700&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/favicon.ico" />
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+    <div class="sparkles" aria-hidden="true"></div>
+    <div class="hearts-layer" id="heartsLayer" aria-hidden="true"></div>
+
+    <main class="experience">
+      <section class="hero-screen" id="heroScreen">
+        <div class="bubbles" aria-hidden="true">
+          <span class="bubble bubble-1"></span>
+          <span class="bubble bubble-2"></span>
+          <span class="bubble bubble-3"></span>
+          <span class="bubble bubble-4"></span>
+          <span class="bubble bubble-5"></span>
+          <span class="bubble bubble-6"></span>
+          <span class="bubble bubble-7"></span>
+          <span class="bubble bubble-8"></span>
+        </div>
+
+        <div class="hero-card">
+          <div class="bow" aria-hidden="true">
+            <span class="bow-loop bow-loop-left"></span>
+            <span class="bow-loop bow-loop-right"></span>
+            <span class="bow-knot"></span>
+            <span class="bow-tail bow-tail-left"></span>
+            <span class="bow-tail bow-tail-right"></span>
+          </div>
+
+          <p class="eyebrow">Una carta delicada, hecha con mucho cariño</p>
+          <h1>Tengo algo para ustedes <span>💌</span></h1>
+          <p class="hero-copy">
+            Toca el sello y deja que esta carta se abra despacito, como un
+            recuerdo bonito.
+          </p>
+          <button class="open-button" id="openLetterBtn" type="button">
+            Abrir carta
+          </button>
+        </div>
+
+        <div class="envelope-scene" aria-hidden="true">
+          <div class="floral floral-left"></div>
+          <div class="floral floral-right"></div>
+
+          <div class="envelope" id="envelope">
+            <div class="envelope-shadow"></div>
+            <div class="envelope-back"></div>
+            <div class="envelope-letter-peek"></div>
+            <div class="envelope-flap"></div>
+            <div class="envelope-front"></div>
+            <div class="wax-seal"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="letter-stage" id="letterStage" aria-hidden="true">
+        <div class="letter-shell">
+          <div
+            class="letter-ornament letter-ornament-top"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="letter-ornament letter-ornament-bottom"
+            aria-hidden="true"
+          ></div>
+
+          <div class="audio-pill">
+            <button
+              class="audio-toggle"
+              id="audioToggle"
+              type="button"
+              aria-pressed="false"
+            >
+              <span class="audio-icon" aria-hidden="true">♫</span>
+              <span id="audioLabel">Reproducir música</span>
+            </button>
+            <span class="audio-hint" id="audioHint"
+              >La melodía comienza al abrir la carta</span
+            >
+          </div>
+
+          <!-- El texto principal se inyecta con efecto typewriter desde script.js -->
+          <article class="letter-paper" aria-labelledby="letterTitle">
+            <p class="letter-date">Con cariño sincero</p>
+            <h2 id="letterTitle">Para ustedes</h2>
+            <div class="letter-divider" aria-hidden="true"></div>
+            <div
+              class="letter-content is-typing"
+              id="letterContent"
+              aria-live="polite"
+            ></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Reemplaza esta ruta por tu audio favorito si quieres otra canción -->
+    <audio
+      id="backgroundMusic"
+      src="assets/carta.mp3"
+      preload="auto"
+      loop
+    ></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
